@@ -57,5 +57,5 @@ class Backend(object):
         cls.prepare(model, device, **kwargs).run(inputs)
 
     @classmethod
-    def run_node(cls, node, inputs):
+    def run_node(cls, node, inputs, device='CPU'):
         onnx.checker.check_node(node)
